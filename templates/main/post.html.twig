@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire{% endblock %}
+
+{% block body %}
+    {% include "includes/header.html.twig" %}
+    <div class="div_centered" style="max-width: 420px">
+        <div class="" style="padding: 5%">
+            <div class="card">
+                <div class="card-header">
+                    <h2>{{ post.title }}</h2>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        {{ post.content }}<br><br>
+                    </div>
+                    <span><i>Par : {{ post.author }}</i></span>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
