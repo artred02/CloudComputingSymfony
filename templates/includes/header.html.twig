@@ -1,0 +1,28 @@
+{% extends 'base.html.twig' %}
+
+
+{% block body %}
+
+    <style>
+        .nav_pincipale{
+            background-color: #3f51b5;
+        }
+        .header_nav{
+            margin: 0 25px 0 25px;
+            color: white;
+        }
+    </style>
+
+    <nav class="navbar navbar-expand-lg nav_pincipale">
+        <a class="navbar-link header_nav" href="{{ path('app_main') }}"><i class="fa-solid fa-house text-white"></i></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto" style="float: left">
+                <li class="nav-item active"><a class="nav-link header_nav" href="{{ path('app_form') }}"><i class="fa-solid fa-pen-nib"></i></a></li>
+            </ul>
+        </div>
+    </nav>
+{% endblock %}

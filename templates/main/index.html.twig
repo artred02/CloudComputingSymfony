@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello MainController!{% endblock %}
+
+{% block body %}
+    {% include "includes/header.html.twig" %}
+
+    <div style="margin: 15px 15px 15px 15px; display: grid; grid-template-columns: repeat(2, 50%);">
+        {% for post in posts %}
+            <div class="card">
+                <div class="card-header">
+                    <h2>{{ post.title }}</h2>
+                </div>
+                <div class="card-body">
+                    <div class="text-center">
+                        {{ post.content }}<br><br>
+                    </div>
+                    <span><i>Par : {{ post.author }}</i></span>
+                </div>
+                <div class="card-footer">
+                    <a href="{{ path('app_post', {postId: post.id}) }}">Accéder au post</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

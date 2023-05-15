@@ -1,0 +1,23 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Formulaire{% endblock %}
+
+{% block body %}
+    {% include "includes/header.html.twig" %}
+    <div class="div_centered" style="max-width: 420px">
+        <div class="text-center" style="padding: 5%">
+            <h1  style="color: white; margin-bottom: 15px">Nouveau Post</h1>
+            {{ form_start(form) }}
+            <div>
+                {{ form_label(form.author, 'Auteur', {'label_attr': {'style': 'float: left; margin-bottom: 3px'}}) }}
+                {{ form_widget(form.author, {'attr': {'style': 'margin-bottom: 15px'}}) }}
+                {{ form_label(form.title, 'Titre', {'label_attr': {'style': 'float: left; margin-bottom: 3px'}}) }}
+                {{ form_widget(form.title, {'attr': {'style': 'margin-bottom: 15px'}}) }}
+                {{ form_label(form.content, 'Contenu', {'label_attr': {'style': 'float: left; margin-bottom: 3px'}}) }}
+                {{ form_widget(form.content, {'attr': {'style': 'margin-bottom: 35px'}}) }}
+            </div>
+            <button type="submit" class="btn" style="border: solid 1px; width: 100%">Nouveau</button>
+            {{ form_end(form) }}
+        </div>
+    </div>
+{% endblock %}
